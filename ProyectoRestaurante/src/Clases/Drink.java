@@ -10,11 +10,23 @@ public class Drink extends Product{
 		this.alcoholic=alcoholic;
 	}
 
+	
 	@Override
 	public double getBundlePack(int id) {
 		// TODO Apéndice de método generado automáticamente
 		return 0;
 	}
+	
+
+	public boolean isAlcoholic() {
+		return alcoholic;
+	}
+
+
+	public void setAlcoholic(boolean alcoholic) {
+		this.alcoholic = alcoholic;
+	}
+
 
 	@Override
 	public String getName(int id) {
@@ -35,14 +47,11 @@ public class Drink extends Product{
 		return result;
 	}
 	
-	public boolean isAlcoholicUU(int id) {
-		boolean result=false;
-		return result;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Drink ["+super.toString()+"alcoholic=" + alcoholic + "]";
+		return "Drink ["+super.toString()+"  alcoholic= " + alcoholic + "]";
 	}
 	
 	

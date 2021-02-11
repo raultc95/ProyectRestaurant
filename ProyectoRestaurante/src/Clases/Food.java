@@ -28,17 +28,15 @@ public class Food extends Product {
 
 	@Override
 	public boolean getItsForCeliac(int id) {
-		boolean result=false;
-		return result;
+		return this.forCeliac;
 	}
-	public boolean isForVegans(int id) {
-		boolean result=false;
-		return result;
+	public boolean isForVegans() {
+		return this.forVegans;
 	}
 
 	@Override
 	public String toString() {
-		return "Food ["+super.toString()+"forVegans=" + forVegans + "]";
+		return "Food ["+super.toString()+"  forVegans= " + forVegans + "]";
 	}
 	
 }

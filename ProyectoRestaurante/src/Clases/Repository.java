@@ -15,58 +15,93 @@ public class Repository {
 			carta.add(new Food(4,"Durum", 1, false, false));
 			carta.add(new Food(5,"Pizza Vegana", 5, true, true));
 			carta.add(new Food(6,"Kebah", 1.5, true, false));
-			
-		
+	
 		}
 
 		
 		  public void getAllProducts() {
-			  for (Product item : carta) {System.out.println(item);}
+			  carta.forEach(p->System.out.println(p));
 		  }
 	
-		  public List<IProduct> getAllDrinks() {
+		  public List<Drink> getAllDrinks() {
+			  List<Drink> result=new ArrayList<>();
+			  for (Product item : carta) {
+				  if (item instanceof Drink) {
+					result.add((Drink) item);
+				}
+				
+			}
+		    return result;
+		  }
+	
+		  public List<Food> getAllFoods() {
+			  List<Food> result=new ArrayList<>();
+			  for (Product item : carta) {
+				  if (item instanceof Food) {
+					result.add((Food) item);
+				}
+				
+			}
+		    return result;
+		  }
+	
+		  public List<Drink> getAllNoAlcoholicDrinks() {
+			  List<Drink> result=new ArrayList<>(); 
+			  for (Drink item : getAllDrinks()) {
+				  if (!item.isAlcoholic()) {
+					result.add(item);
+				}
+				
+			}
+		    return result;
+		  }
+	
+		  public List<Drink> getAllAlcoholicsDrinks() {
+			  List<Drink> result=new ArrayList<>(); 
+			  for (Drink item : getAllDrinks()) {
+				  if (item.isAlcoholic()) {
+					result.add(item);
+				  }
+				
+			  }
+		    return result;
+		  }
+	
+		  public List<Food> getAllForVeganFood() {
+			  List<Food> result=new ArrayList<>(); 
+			  for (Food item : getAllFoods()) {
+				  if (item.isForVegans()) {
+					result.add(item);
+				  }
+				
+			  }
+		    return result;
+		  }
+	
+		  public List<Product> getBundleProducts(Product p) {
 		    // TODO Auto-generated method stub
 		    return null;
 		  }
 	
-		  public List<IProduct> getAllFoods() {
-		    // TODO Auto-generated method stub
-		    return null;
-		  }
-	
-		  public List<IProduct> getAllNoAlcoholicDrinks() {
-		    // TODO Auto-generated method stub
-		    return null;
-		  }
-	
-		  public List<IProduct> getAllAlcoholicsDrinks() {
-		    // TODO Auto-generated method stub
-		    return null;
-		  }
-	
-		  public List<IProduct> getAllForVeganFood() {
-		    // TODO Auto-generated method stub
-		    return null;
-		  }
-	
-		  public List<IProduct> getBundleProducts(IProduct Producto) {
-		    // TODO Auto-generated method stub
-		    return null;
-		  }
-	
-		  public IProduct searchProduct(String name) {
-		    // TODO Auto-generated method stub
-		    return null;
+		  public Product searchProduct(String name) {
+			  Product result = null;
+			  for (Product item : carta) {
+				  if (item.getName().equals(name)) {
+					  result=item;
+				  }
+				
+			  }
+		    return result;
 		  }
 	
 		  public Drink searchDrinks(String name) {
-		    // TODO Auto-generated method stub
-		    return null;
+		    Drink result=(Drink)searchProduct(name);
+		    return result;
 		  }
 	
 		  public Food searchFoods(String name) {
-		    // TODO Auto-generated method stub
-		    return null;
+		    Food result=(Food)searchProduct(name);
+		    return result;
 		  }
 
 
