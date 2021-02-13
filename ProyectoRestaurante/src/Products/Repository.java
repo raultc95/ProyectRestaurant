@@ -1,4 +1,4 @@
-package Clases;
+package Products;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class Repository {
 			carta.add(new Food(4,"Durum", 1, false, false));
 			carta.add(new Food(5,"Pizza Vegana", 5, true, true));
 			carta.add(new Food(6,"Kebah", 1.5, true, false));
-	
+			System.out.println("Numero de Productos: "+carta.size());
 		}
 
 		
@@ -103,7 +103,10 @@ public class Repository {
 		    Food result=(Food)searchProduct(name);
 		    return result;
 		  }
-
+		  public int getSize() {
+			  int result=carta.size();
+			  return result;
+		  }
 
 		@Override
 		public String toString() {

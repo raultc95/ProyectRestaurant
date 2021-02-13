@@ -1,4 +1,4 @@
-package Clases;
+package Products;
 
 
 public class Drink extends Product{
@@ -12,7 +12,7 @@ public class Drink extends Product{
 
 	
 	@Override
-	public double getBundlePack(int id) {
+	public double getBundlePack() {
 		// TODO Apéndice de método generado automáticamente
 		return 0;
 	}
@@ -22,27 +22,19 @@ public class Drink extends Product{
 		return alcoholic;
 	}
 
-
-	public void setAlcoholic(boolean alcoholic) {
-		this.alcoholic = alcoholic;
-	}
-
-
 	@Override
-	public String getName(int id) {
-		String result="null";
-		result=this.name;
-		return result;
+	public String getName() {
+		return this.name;
 	}
 
 	@Override
-	public double getPrice(int id) {
-		// TODO Apéndice de método generado automáticamente
-		return 0;
+	public double getPrice() {
+	
+		return this.price;
 	}
 
 	@Override
-	public boolean getItsForCeliac(int id) {
+	public boolean getItsForCeliac() {
 		boolean result=false;
 		return result;
 	}

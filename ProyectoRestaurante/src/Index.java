@@ -1,17 +1,15 @@
-import Clases.Repository;
+/*import Clients.Client;
+import Clients.RepositoryC;*/
+import Products.Repository;
 
 public class Index {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException  {
 		// TODO Apéndice de método generado automáticamente
 		Repository carta=new Repository();
-		carta.getAllProducts();//.forEach(p->System.out.println(p));
-		System.out.println("");
-		System.out.println(""+carta.searchDrinks("Fanta"));
-
-		//carta.getAllAlcoholicsDrinks().forEach(p->System.out.println(p));
-
-			
+		//RepositoryC clientes=new RepositoryC();
+		
+		
 	}
 
 	

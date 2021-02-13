@@ -1,4 +1,5 @@
-package Clases;
+package Products;
+
 
 public class Food extends Product {
 	private boolean forVegans;
@@ -9,27 +10,29 @@ public class Food extends Product {
 	}
 
 	@Override
-	public double getBundlePack(int id) {
+	public double getBundlePack() {
 		// TODO Apéndice de método generado automáticamente
 		return 0;
 	}
 
 	@Override
-	public String getName(int id ) {
-		// TODO Apéndice de método generado automáticamente
-		return null;
+	public String getName() {
+		return this.name;
+	}
+	public void setName(String name) {
+		this.name=name;
 	}
 
 	@Override
-	public double getPrice(int id) {
-		// TODO Apéndice de método generado automáticamente
-		return 0;
+	public double getPrice() {
+		return this.price;
 	}
 
 	@Override
-	public boolean getItsForCeliac(int id) {
+	public boolean getItsForCeliac() {
 		return this.forCeliac;
 	}
+	
 	public boolean isForVegans() {
 		return this.forVegans;
 	}

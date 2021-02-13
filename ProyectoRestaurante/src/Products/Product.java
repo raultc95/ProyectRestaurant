@@ -1,4 +1,4 @@
-package Clases;
+package Products;
 
 import Interfacez.IProduct;
 
